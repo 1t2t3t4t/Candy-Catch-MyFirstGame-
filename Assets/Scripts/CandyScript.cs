@@ -9,5 +9,9 @@ public class CandyScript : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        else if (other.gameObject.CompareTag(Tag.Boundary))
+        {
+            Destroy(gameObject);
+        }
     }
 }

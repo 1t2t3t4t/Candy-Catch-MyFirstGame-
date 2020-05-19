@@ -2,7 +2,8 @@
 {
     public struct Tag
     {
-        public static string Player = "Player";
-        public static string Candy = "Candy";
+        public const string Player = "Player";
+        public const string Candy = "Candy";
+        public const string Boundary = "Boundary";
     }
 }
