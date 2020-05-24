@@ -1,4 +1,4 @@
-﻿namespace Constant
+﻿namespace Scripts.Constant
 {
     public struct Tag
     {

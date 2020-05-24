@@ -1,32 +1,31 @@
 ﻿using UnityEngine;
-public class PlayerController : MonoBehaviour
+
+namespace Scripts
 {
-    [SerializeField]
-    private float MoveSpeed;
-
-    [SerializeField] 
-    private float MaxPos;
-    
-    private bool _canMove = true;
-
-    private void Update()
+    public class PlayerController : MonoBehaviour
     {
-        if (_canMove)
+        private readonly bool _canMove = true;
+
+        [SerializeField] private float MaxPos;
+
+        [SerializeField] private float MoveSpeed;
+
+        private void Update()
         {
-            _move();
+            if (_canMove) Move();
         }
-    }
 
-    private void _move()
-    {
-        var xMovement = Input.GetAxis("Horizontal");
+        private void Move()
+        {
+            var xMovement = Input.GetAxis("Horizontal");
 
-        var position = transform.position;
-        position += Vector3.right * (xMovement * MoveSpeed * Time.deltaTime);
-        
-        var clampedPosX = Mathf.Clamp(position.x, -MaxPos, MaxPos);
-        position.x = clampedPosX;
-        
-        transform.position = position;
+            var position = transform.position;
+            position += Vector3.right * (xMovement * MoveSpeed * Time.deltaTime);
+
+            var clampedPosX = Mathf.Clamp(position.x, -MaxPos, MaxPos);
+            position.x = clampedPosX;
+
+            transform.position = position;
+        }
     }
 }

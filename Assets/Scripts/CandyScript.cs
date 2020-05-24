@@ -1,17 +1,15 @@
-﻿using Constant;
+﻿using Scripts.Constant;
 using UnityEngine;
 
-public class CandyScript : MonoBehaviour
+namespace Scripts
 {
-    private void OnTriggerEnter2D(Collider2D other)
+    public class CandyScript : MonoBehaviour
     {
-        if (other.gameObject.CompareTag(Tag.Player))
+        private void OnTriggerEnter2D(Collider2D other)
         {
-            Destroy(gameObject);
-        }
-        else if (other.gameObject.CompareTag(Tag.Boundary))
-        {
-            Destroy(gameObject);
+            if (other.gameObject.CompareTag(Tag.Player))
+                Destroy(gameObject);
+            else if (other.gameObject.CompareTag(Tag.Boundary)) Destroy(gameObject);
         }
     }
 }
