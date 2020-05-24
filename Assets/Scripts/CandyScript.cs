@@ -12,7 +12,11 @@ namespace Scripts
                 GameManager.Shared.IncreaseScore();
                 Destroy(gameObject);
             }
-            else if (other.gameObject.CompareTag(Tag.Boundary)) Destroy(gameObject);
+            else if (other.gameObject.CompareTag(Tag.Boundary))
+            {
+                GameManager.Shared.DecreaseLife();
+                Destroy(gameObject);
+            }
         }
     }
 }
