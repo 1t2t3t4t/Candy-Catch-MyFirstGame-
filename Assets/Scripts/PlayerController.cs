@@ -4,7 +4,7 @@ namespace Scripts
 {
     public class PlayerController : MonoBehaviour
     {
-        private readonly bool _canMove = true;
+        private bool _canMove => !GameManager.Shared.IsGameOver;
 
         [SerializeField] private float MaxPos;
 

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace Scripts
@@ -7,8 +8,11 @@ namespace Scripts
     {
         public static GameManager Shared;
 
+        public CandySpawner Spawner;
+        
         public Text ScoreText;
-        public GameObject LifeHolder;
+        public GameObject LifePanel;
+        public GameObject GameOverPanel;
 
         private int _score = 0;
         private int _life = 3;
@@ -30,7 +34,7 @@ namespace Scripts
         public void DecreaseLife()
         {
             _life--;
-            Destroy(LifeHolder.transform.GetChild(0).gameObject);
+            Destroy(LifePanel.transform.GetChild(0).gameObject);
 
             if (_life <= 0)
                 GameOver();
@@ -39,6 +43,8 @@ namespace Scripts
         private void GameOver()
         {
             IsGameOver = true;
+            Spawner.StopSpawning();
+            GameOverPanel.SetActive(true);
         }
     }
 }

@@ -13,6 +13,11 @@ namespace Scripts
             StartSpawning();
         }
 
+        public void StopSpawning()
+        {
+            StopCoroutine(nameof(SpawningCoroutine));
+        }
+
         private void StartSpawning()
         {
             StartCoroutine(nameof(SpawningCoroutine));
@@ -22,8 +27,8 @@ namespace Scripts
         {
             while (!GameManager.Shared.IsGameOver)
             {
-                yield return new WaitForSeconds(1);
                 SpawnCandy();
+                yield return new WaitForSeconds(1);
             }
         }
 

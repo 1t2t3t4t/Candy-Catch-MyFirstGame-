@@ -12,8 +12,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a935155a-1143-4e7c-9148-1ed47da21e9a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Candy Catch/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Candy Catch/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CandyScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CandyScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CandySpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CandySpawner.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Button.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Button.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,10 +40,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/Candy.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Constant/Tag.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CandySpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CandyScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CandySpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       </list>
     </option>
@@ -97,7 +99,7 @@
       <option name="presentableId" value="Default" />
       <updated>1589906907081</updated>
       <workItem from="1589906915912" duration="1958000" />
-      <workItem from="1590331968633" duration="5219000" />
+      <workItem from="1590331968633" duration="6213000" />
     </task>
     <servers />
   </component>
