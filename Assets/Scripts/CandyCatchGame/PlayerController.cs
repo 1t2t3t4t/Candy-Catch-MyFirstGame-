@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Scripts
+namespace Scripts.CandyCatchGame
 {
     public class PlayerController : MonoBehaviour
     {

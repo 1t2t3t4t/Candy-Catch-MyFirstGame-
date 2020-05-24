@@ -1,7 +1,7 @@
 ﻿using Scripts.Constant;
 using UnityEngine;
 
-namespace Scripts
+namespace Scripts.CandyCatchGame
 {
     public class CandyScript : MonoBehaviour
     {

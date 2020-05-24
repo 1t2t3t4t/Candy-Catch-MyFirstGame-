@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-namespace Scripts
+namespace Scripts.CandyCatchGame
 {
     public class GameManager : MonoBehaviour
     {
@@ -33,11 +32,12 @@ namespace Scripts
 
         public void DecreaseLife()
         {
-            _life--;
-            Destroy(LifePanel.transform.GetChild(0).gameObject);
-
-            if (_life <= 0)
-                GameOver();
+            if (_life > 0)
+            {
+                _life--;
+                Destroy(LifePanel.transform.GetChild(0).gameObject);
+            }
+            else GameOver();
         }
 
         private void GameOver()
