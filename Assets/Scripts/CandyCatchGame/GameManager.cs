@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace Scripts.CandyCatchGame
@@ -30,6 +31,20 @@ namespace Scripts.CandyCatchGame
             ScoreText.text = _score.ToString();
         }
 
+        #region Game Over Panel Event
+
+        public void OnClickRestart()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+
+        public void OnClickMainMenu()
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
+
+        #endregion
+
         public void DecreaseLife()
         {
             if (_life > 0)
@@ -37,7 +52,9 @@ namespace Scripts.CandyCatchGame
                 _life--;
                 Destroy(LifePanel.transform.GetChild(0).gameObject);
             }
-            else GameOver();
+            
+            if (_life <= 0)
+                GameOver();
         }
 
         private void GameOver()
