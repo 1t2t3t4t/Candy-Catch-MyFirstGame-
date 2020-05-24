@@ -1,11 +1,13 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
 namespace Scripts
 {
     public class GameManager : MonoBehaviour
     {
         public static GameManager Shared;
+
+        public Text ScoreText;
 
         private int _score = 0;
         
@@ -20,6 +22,7 @@ namespace Scripts
         public void IncreaseScore()
         {
             _score++;
+            ScoreText.text = _score.ToString();
         }
 
         public void GameOver()
