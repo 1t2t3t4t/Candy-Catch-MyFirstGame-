@@ -8,7 +8,10 @@ namespace Scripts
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.gameObject.CompareTag(Tag.Player))
+            {
+                GameManager.Shared.IncreaseScore();
                 Destroy(gameObject);
+            }
             else if (other.gameObject.CompareTag(Tag.Boundary)) Destroy(gameObject);
         }
     }

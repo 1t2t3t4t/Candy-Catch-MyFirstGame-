@@ -5,7 +5,6 @@ namespace Scripts
 {
     public class CandySpawner : MonoBehaviour
     {
-        private readonly bool _isGameOver = false;
         public Collider2D Boundary;
         public GameObject[] Candies;
 
@@ -21,7 +20,7 @@ namespace Scripts
 
         private IEnumerator SpawningCoroutine()
         {
-            while (!_isGameOver)
+            while (!GameManager.Shared.IsGameOver)
             {
                 yield return new WaitForSeconds(1);
                 SpawnCandy();
